@@ -6,7 +6,7 @@ let rect_height = 20;
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -23,9 +23,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 drawCat(0,0,0)
 drawFish(0,0,0)
 
+
 function drawCat(){
-  let headX = 60;
-  let headY = 50;
+push();
+translate(0,0);
+scale(1.5);
+  let headX = 35;
+  let headY = 40;
   let outlineWidth = 1; //1
   let furColour = "#ffffff"; //#ffffff
   let secondaryColour = "#b8d8ff"; //#b8d8ff
@@ -99,13 +103,18 @@ function drawCat(){
 
   //rect(40 ,40, rect_width, rect_height);
   }
+  pop();
  }
 
+
 function drawFish(){
-  let fishX = 150;
-  let fishY = 130;
-  let fishHeadX = 126;
-  let fishHeadY = 50;
+push();
+translate(0,0);
+scale(1.3);
+  let fishX = 120;
+  let fishY = 110;
+  let fishHeadX = 96;
+  let fishHeadY = 30;
   let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
   noStroke();
   drawTail (0,0,0)
@@ -193,7 +202,7 @@ function drawFish(){
   fill("#edab6d");
   ellipse(fishHeadX-5, fishHeadY+77, 4, 4);
   }
-
+pop();
 }
 
 }
