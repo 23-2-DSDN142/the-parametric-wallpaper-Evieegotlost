@@ -4,8 +4,8 @@ let rect_height = 20;
 
 //Background
 let waveColour = "#eb5797";
+let stripColour = ("#d64274");
 let bgColour = ("#c71a5f");
-let stripColour = ("#8feaff");
 //Cat
 let headX = 35;
 let headY = 40;
@@ -21,7 +21,7 @@ let fishY = 110;
 let fishHeadX = 106;
 let fishHeadY = 30;
 let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
-let chopFish = false;
+let chopFish = true;
 
   function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -241,9 +241,9 @@ pop();
 
   function drawbg(){
   noFill();
-  strokeWeight(30);
+  strokeWeight(20);
   stroke(stripColour);
-  bezier(180, 0, 90, 140, 190, 90, 80, 200);
+  bezier(197, 0, 90, 140, 170, 90, 98, 200);
 
   noFill();
   strokeWeight(70);
