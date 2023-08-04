@@ -3,7 +3,38 @@ let rect_width  = 20;
 let rect_height = 20;
 
 
-function setup_wallpaper(pWallpaper) {
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 1; //1
+let furColour = "#ffffff"; //#ffffff
+let secondaryColour = "#b8d8ff"; //#b8d8ff
+let lineColour = "#5989ab"; //#5989ab
+let openMouth = false;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = false;
+
+function mousePressed() {
+  if (openMouth) {
+    openMouth = false; // Toggle openMouth variable
+  } else {
+    openMouth = true;
+  }
+
+  if (chopFish) {
+    chopFish = false; // Toggle chopFish variable
+  } else {
+    chopFish = true;
+  }
+}
+
+  function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
@@ -20,23 +51,19 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-drawCat(0,0,0)
-drawFish(0,0,0)
+drawCat();
+drawFish();
 
 
 function drawCat(){
+
 push();
 translate(0,0);
 scale(1.5);
-  let headX = 35;
-  let headY = 40;
-  let outlineWidth = 1; //1
-  let furColour = "#ffffff"; //#ffffff
-  let secondaryColour = "#b8d8ff"; //#b8d8ff
-  let lineColour = "#5989ab"; //#5989ab
-  drawHead (0,0,0)
-  drawEars(0,0,0)
-  drawFace(0,0,0)
+
+  drawHead();
+  drawEars();
+  drawFace();
 
   function drawHead() {fill(furColour);
   stroke(lineColour);
@@ -62,6 +89,8 @@ scale(1.5);
   triangle(headX+25, headY-18, headX+29, headY-29, headX+22, headY-24); 
   }
 
+
+
   function drawFace() {
   fill(secondaryColour) //cheeks
   strokeWeight(0);
@@ -80,6 +109,14 @@ scale(1.5);
   ellipse(headX+8, headY-13, 3, 2);
   ellipse(headX, headY, 3, 0.2);
 
+  if (openMouth) {
+    fill("#e85f81"); //mouth open
+    strokeWeight(0);
+    ellipse(headX, headY+7, 13, 8)
+  } else {
+    openMouth = false
+  }
+
   noFill(); //mouth
   strokeWeight(2);
   push();
@@ -89,7 +126,8 @@ scale(1.5);
   arc(12, 0, 25, 25, 90, 180);
   rotate(-30);
   arc(0, -12, 25, 25, 90, 180);
- pop();
+  pop();
+
 
   noFill(); //whiskers
   stroke(lineColour);
@@ -102,23 +140,28 @@ scale(1.5);
   line(headX+28, headY+6, headX+40, headY+10 );
 
   //rect(40 ,40, rect_width, rect_height);
-  }
   pop();
  }
-
+}
 
 function drawFish(){
+
+  
+  if (chopFish) {
+    fishHeadX = 99;
+    fishX = 127;
+  } else {
+    fishHeadX = 106;
+    fishX = 120;
+  }
+
 push();
 translate(0,0);
 scale(1.3);
-  let fishX = 120;
-  let fishY = 110;
-  let fishHeadX = 96;
-  let fishHeadY = 30;
-  let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
+
   noStroke();
-  drawTail (0,0,0)
-  drawFishhead(0,0,0)
+  drawTail();
+  drawFishhead();
 
   function drawTail() {
   fill("#db8b51"); //tailfin
