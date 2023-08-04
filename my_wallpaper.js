@@ -2,7 +2,10 @@
 let rect_width  = 20;
 let rect_height = 20;
 
-
+//Background
+let waveColour = "#eb5797";
+let bgColour = ("#c71a5f");
+let stripColour = ("#8feaff");
 //Cat
 let headX = 35;
 let headY = 40;
@@ -20,24 +23,10 @@ let fishHeadY = 30;
 let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
 let chopFish = false;
 
-function mousePressed() {
-  if (openMouth) {
-    openMouth = false; // Toggle openMouth variable
-  } else {
-    openMouth = true;
-  }
-
-  if (chopFish) {
-    chopFish = false; // Toggle chopFish variable
-  } else {
-    chopFish = true;
-  }
-}
-
   function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(true); //set this to false when you're ready to print
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -47,13 +36,15 @@ function mousePressed() {
 
 function wallpaper_background() {
   //background(240, 255, 240); //light honeydew green colour
-  background("#c71a5f")
+  background(bgColour)
+  
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+  
+drawbg(); 
 drawCat();
 drawFish();
-
 
 function drawCat(){
 
@@ -247,6 +238,21 @@ scale(1.3);
   }
 pop();
 }
+
+  function drawbg(){
+  noFill();
+  strokeWeight(30);
+  stroke(stripColour);
+  bezier(180, 0, 90, 140, 190, 90, 80, 200);
+
+  noFill();
+  strokeWeight(70);
+  stroke(waveColour);
+  bezier(140, 0, 50, 140, 130, 90, 40, 200);
+
+
+  }
+ 
 
 }
 
