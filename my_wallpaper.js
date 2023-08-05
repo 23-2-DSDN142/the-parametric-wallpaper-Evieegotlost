@@ -24,7 +24,7 @@ let fishY = 110;
 let fishHeadX = 106;
 let fishHeadY = 30;
 let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
-let chopFish = true;
+let chopFish = false;
 
   function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -97,11 +97,17 @@ scale(1.5);
   line(headX-22, headY-8, headX-8, headY-5 )
   line(headX+22, headY-8, headX+8, headY-5 )
 
+  if (openMouth) {
   fill(lineColour); //eyebrows & nose
   stroke(lineColour);
+  ellipse(headX-8, headY-16, 3, 2);
+  ellipse(headX+8, headY-16, 3, 2);
+  ellipse(headX, headY, 3, 0.2);
+} else {
   ellipse(headX-8, headY-13, 3, 2);
   ellipse(headX+8, headY-13, 3, 2);
   ellipse(headX, headY, 3, 0.2);
+}
 
   if (openMouth) {
     fill("#e85f81"); //mouth open
@@ -242,7 +248,7 @@ scale(1.3);
 pop();
 }
 
-  function drawbg(){
+function drawbg(){
   fill(squareColour);
   strokeWeight (0);
   square(175, 70, 70, 20);
