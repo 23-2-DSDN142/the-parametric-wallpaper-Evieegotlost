@@ -4,8 +4,11 @@ let rect_height = 20;
 
 //Background
 let waveColour = "#eb5797";
-let stripColour = ("#d64274");
-let bgColour = ("#c71a5f");
+let dropshadowColour = ("#d64274");
+let stripColour = ("#66dcfa");
+let squareColour = ("#c71a5f");
+let bgColour = ("#a61755");
+
 //Cat
 let headX = 35;
 let headY = 40;
@@ -240,9 +243,21 @@ pop();
 }
 
   function drawbg(){
+  fill(squareColour);
+  strokeWeight (0);
+  square(175, 70, 70, 20);
+  describe(
+  'A white square with a black outline and round edges on a gray canvas.'
+  );
+
+  noFill();
+  strokeWeight(15);
+  stroke(stripColour);
+  bezier(250, 0, 60, 110, 190, 150, 150, 200);
+  
   noFill();
   strokeWeight(20);
-  stroke(stripColour);
+  stroke(dropshadowColour);
   bezier(197, 0, 90, 140, 170, 90, 98, 200);
 
   noFill();
