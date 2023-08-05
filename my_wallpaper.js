@@ -2,23 +2,23 @@
 let rect_width  = 20;
 let rect_height = 20;
 
-//Preset 5
+//Preset 1
 
 //Background
-let waveColour = "#56c9d6";
-let dropshadowColour = ("#c98669");
-let stripColour = ("#694434");
-let squareColour = ("#68baa7");
-let bgColour = ("#8fffd4");
+let waveColour = "#eb5797";
+let dropshadowColour = ("#d64274");
+let stripColour = ("#66dcfa");
+let squareColour = ("#c71a5f");
+let bgColour = ("#a61755");
 
 //Cat
 let headX = 35;
 let headY = 40;
 let outlineWidth = 1;
-let furColour = "#916463";
-let secondaryColour = "#d6787a";
-let lineColour = "#42211e";
-let openMouth = true;
+let furColour = "#ffffff";
+let secondaryColour = "#b8d8ff";
+let lineColour = "#5989ab";
+let openMouth = false;
 
 //Taiyaki Fish
 let fishX = 120;
@@ -26,7 +26,7 @@ let fishY = 110;
 let fishHeadX = 106;
 let fishHeadY = 30;
 let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
-let chopFish = true;
+let chopFish = false;
 
   function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
