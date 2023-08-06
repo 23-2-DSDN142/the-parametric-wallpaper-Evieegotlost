@@ -6,48 +6,255 @@ Your final settings.txt will look something like this when you are finished:
 
 /////////////////////////////////
 
-Wallpaper 1:
+//Preset 1
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+//Background
+let waveColour = "#eb5797";
+let dropshadowColour = ("#d64274");
+let stripColour = ("#66dcfa");
+let squareColour = ("#c71a5f");
+let bgColour = ("#a61755");
 
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 1;
+let furColour = "#ffffff";
+let secondaryColour = "#b8d8ff";
+let lineColour = "#5989ab";
+let openMouth = false;
 
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
-}
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = false;
 
 /////////////////////////////////
 
-Wallpaper 2:
+//Preset 2
 
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+//Background
+let waveColour = "#ffbea6";
+let dropshadowColour = ("#ffc7e3");
+let stripColour = ("#69fff0");
+let squareColour = ("#ffc15e");
+let bgColour = ("#fff4ba");
 
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 2;
+let furColour = "#f2d7ac";
+let secondaryColour = "#faa07d";
+let lineColour = "#a85b23";
+let openMouth = true;
 
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
-}
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#bd1340"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = true;
+
+/////////////////////////////////
+
+//Preset 3
+
+//Background
+let waveColour = "#a3f4ff";
+let dropshadowColour = ("#62d6de");
+let stripColour = ("#ffc9e1");
+let squareColour = ("#ff96c5");
+let bgColour = ("#ffe7c2");
+
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 2;
+let furColour = "#ffffff";
+let secondaryColour = "#ffd0a3";
+let lineColour = "#ff2e54";
+let openMouth = false;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#bd1340"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = true;
+
+/////////////////////////////////
+
+//Preset 4
+
+//Background
+let waveColour = "#180747";
+let dropshadowColour = ("#828aff");
+let stripColour = ("#511ab8");
+let squareColour = ("#ffe0b3");
+let bgColour = ("#20256b");
+
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 1;
+let furColour = "#5c5373";
+let secondaryColour = "#625fa3";
+let lineColour = "#27093d";
+let openMouth = true;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#bd1340"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = false;
+
+/////////////////////////////////
+
+//Preset 5
+
+//Background
+let waveColour = "#56c9d6";
+let dropshadowColour = ("#c98669");
+let stripColour = ("#694434");
+let squareColour = ("#68baa7");
+let bgColour = ("#8fffd4");
+
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 1;
+let furColour = "#916463";
+let secondaryColour = "#d6787a";
+let lineColour = "#42211e";
+let openMouth = true;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = true;
+
+/////////////////////////////////
+
+//Preset 6
+
+//Background
+let waveColour = "#bb87ff";
+let dropshadowColour = ("#9860e0");
+let stripColour = ("#ffffff");
+let squareColour = ("#e69aed");
+let bgColour = ("#edcfff");
+
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 2;
+let furColour = "#9e86a6";
+let secondaryColour = "#c474cf";
+let lineColour = "#8d0c99";
+let openMouth = false;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = true;
+
+/////////////////////////////////
+
+//Preset 7
+
+//Background
+let waveColour = "#000000";
+let dropshadowColour = ("#332f30");
+let stripColour = ("#850534");
+let squareColour = ("#cc004b");
+let bgColour = ("#a60741");
+
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 2;
+let furColour = "#241e20";
+let secondaryColour = "#401f2b";
+let lineColour = "#9e3c60";
+let openMouth = false;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#7a4033"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = false;
+
+/////////////////////////////////
+
+//Preset 8
+
+//Background
+let waveColour = "#dfffb0";
+let dropshadowColour = ("#afe079");
+let stripColour = ("#fff394");
+let squareColour = ("#e33980");
+let bgColour = ("#85b017");
+
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 1;
+let furColour = "#d1b66b";
+let secondaryColour = "#c7e879";
+let lineColour = "#7d6d1b";
+let openMouth = false;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#bd1340"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = true;
+
+/////////////////////////////////
+
+//Preset 9
+
+//Background
+let waveColour = "#a6ceff";
+let dropshadowColour = ("#8583eb");
+let stripColour = ("#2a4b96");
+let squareColour = ("#5d82de");
+let bgColour = ("#75afff");
+
+//Cat
+let headX = 35;
+let headY = 40;
+let outlineWidth = 2;
+let furColour = "#252933";
+let secondaryColour = "#304061";
+let lineColour = "#546894";
+let openMouth = true;
+
+//Taiyaki Fish
+let fishX = 120;
+let fishY = 110;
+let fishHeadX = 106;
+let fishHeadY = 30;
+let fillingColour = "#bd1340"; //#bd1340 redbean or jam colour, #7a4033 nutella
+let chopFish = true;
+
+/////////////////////////////////
+
